@@ -89,12 +89,12 @@ if (isset($_POST["role"])) {
         </div>
         <div id="select" class="d-flex flex-column sec p-4 mb-4  rounded shadow-sm" style="background-color:white;">
             <h4>Sample Select Statements</h4>
-            <p>SELECT employee_id, supervisor_no FROM assistant WHERE employee_id = 'E0015';</p> <a class="btn btn-primary" href="select.php?command=1">Click to execute</a>
-            <p>SELECT contact_no, email, address FROM branch WHERE branch_no = 'BR100';</p> <a class="btn btn-primary" href="select.php?command=2">Click to execute</a>
-            <p>SELECT * FROM branch WHERE address = 'No. 71A, Matara Road, Ahangama.';</p> <a class="btn btn-primary" href="select.php?command=3">Click to execute</a>
-            <p>SELECT * FROM client WHERE registered_date = '2019-%-%';</p> <a class="btn btn-primary" href="select.php?command=4">Click to execute</a>
-            <p>SELECT client_no, full_name, email FROM client;</p> <a class="btn btn-primary" href="select.php?command=5">Click to execute</a>
-            <p>SELECT employee_id, name, salary, job_type FROM employee WHERE salary > 50000 ORDER BY salary DESC;</p> <a class="btn btn-primary" href="select.php?command=6">Click to execute</a>
+            <p>[1] SELECT employee_id, supervisor_no FROM assistant WHERE employee_id = 'E0015';</p> <a class="btn btn-primary" href="select.php?command=1">Click to execute</a>
+            <p>[2] SELECT contact_no, email, address FROM branch WHERE branch_no = 'BR100';</p> <a class="btn btn-primary" href="select.php?command=2">Click to execute</a>
+            <p>[3] SELECT * FROM branch WHERE address = 'No. 71A, Matara Road, Ahangama.';</p> <a class="btn btn-primary" href="select.php?command=3">Click to execute</a>
+            <p>[4] SELECT * FROM client WHERE registered_date = '2019-%-%';</p> <a class="btn btn-primary" href="select.php?command=4">Click to execute</a>
+            <p>[5] SELECT client_no, full_name, email FROM client;</p> <a class="btn btn-primary" href="select.php?command=5">Click to execute</a>
+            <p>[6] SELECT employee_id, name, salary, job_type FROM employee WHERE salary > 50000 ORDER BY salary DESC;</p> <a class="btn btn-primary" href="select.php?command=6">Click to execute</a>
 
         </div>
         <div class="d-flex flex-column sec p-4 mb-4  rounded shadow-sm" style="background-color:white ;">
