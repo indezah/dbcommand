@@ -34,7 +34,8 @@ if (isset($_POST["role"])) {
         }
 
         p {
-            margin-bottom: 5px;
+
+            margin-bottom: 10px;
         }
 
         #user {
@@ -54,7 +55,9 @@ if (isset($_POST["role"])) {
     <h1 class="h1 pt-4 pb-4" style="text-align:center">Sewana Property Renters</h1>
 
     <div class="container">
-        <div id="user" class="d-flex flex-column p-4 mb-4 rounded-3 shadow-sm align-items-start">Logged in as : <?= $_SESSION['role'] ?><a class="mt-1  btn btn-secondary" href="logout.php">Logout</a></div>
+        <div id="user" class="d-flex justify-content-center align-items-center p-4 mb-4 rounded-3 shadow-sm " style="background-color:rgba(0, 0, 0, 0.3); color:white;">
+            <p style="margin: 0px 0px 0px 0px">Logged in as : <?= $_SESSION['role'] ?></p><a style="margin-bottom: 0px; margin-left: 30px; " class="mt-1  btn btn-danger" href="logout.php">Logout</a>
+        </div>
         <?php if (isset($_GET['bstatus'])) { ?>
             <div class="sticky-top mb-4 container alert alert-danger shadow" role="alert">
                 <?= $_GET['bstatus'] ?>
@@ -67,18 +70,22 @@ if (isset($_POST["role"])) {
         <?php } ?>
         <div class="d-flex flex-column p-4 mb-4 rounded shadow-sm" style="background-color:white;">
             <h4>Sample Insert Statements</h4>
-            <p>INSERT INTO USERS(role,username,pw,name) VALUES("admin","nis",1234,"Indes"); </p> <a class="btn btn-primary" href="insert.php?command=1">Click to execute</a>
-            <p>INSERT INTO USERS (role,username,pw,name) VALUES('nis','niw',2134,'I45des'); </p> <a class="btn btn-primary" href="insert.php?command=2">Click to execute</a>
+            <p>[1] INSERT INTO branch(branch_no, contact_no, addreass, email) VALUES(‘BR500’, ‘0352109468’, ‘No. 15/B, Ranwala Junction, Kegalle’, ‘sewanabr500@gmail.com’);</p> <a class="btn btn-primary" href="insert.php?command=1">Click to execute</a>
+            <p>[2] INSERT INTO employee(employee_id, name, salary, gender, dob, nic, contact_no, start_date, branch_no, job_type) VALUES(‘E0030’, ‘Ruwani Karunanayaka’, 37000, ‘F’, 1998-12-05, ‘199865240482’, ‘0719402855’, 2021-05-13, ‘BR400’, ‘Assistant’);</p> <a class="btn btn-primary" href="insert.php?command=2">Click to execute</a>
+            <p>[3] INSERT INTO property_owner(owner_id, contact_no, email, address) VALUES(‘O2127’, ‘0720485375’, ‘mdnwansapura7834@gmail.com’, ‘No. 24, Balana Road, Kadugannawa’);</p> <a class="btn btn-primary" href="insert.php?command=3">Click to execute</a>
+            <p>[4] INSERT INTO property(property_no, proposed_rental, type, number_of_rooms, address, owner_id) VALUES(‘P0025’, ‘45000’, ‘flat’, ‘3’, ‘No. 469/1, Temple Road, Kandy’, ‘O2127’);</p> <a class="btn btn-primary" href="insert.php?command=4">Click to execute</a>
+            <p>[5] INSERT INTO client(client_no, full_name, nic, email, registered_date, branch_no, manager_name) VALUES(‘C0175’, ‘Subhani Galigamuwa’, ‘944529441V’, ‘subhaniama94g@gmail.com’, 2020-10-21, ‘BR500’, ‘Kumara Silva’);</p> <a class="btn btn-primary" href="insert.php?command=5">Click to execute</a>
+            <p>[6] INSERT INTO lease(lease_no, client_no, property_no, rent_start, rent_finish, monthly_rent, payment_method) VALUES('L0010', ‘C0175’, ‘P0017’, '2021-03-15', '2021-10-16', 5000, 'cash');</p> <a class="btn btn-primary" href="insert.php?command=6">Click to execute</a>
         </div>
         <div class="d-flex flex-column p-4 mb-4 rounded shadow-sm" style=" background-color:white;">
             <h4>Sample Update Statements</h4>
-            <p>UPDATE assistant SET supervisor_no = 'S0002' WHERE employee_no = 'E0016';</p> <a class="btn btn-primary" href="update.php?command=1">Click to execute</a>
-            <p>UPDATE branch SET contact_no = '0117463081', address = 'No. 201/5, Galle Road, Colombo 03' WHERE branch_no = 'BR100'; </p> <a class="btn btn-primary" href="update.php?command=2">Click to execute</a>
-            <p>UPDATE client SET nic = '198457094285' WHERE nic = '845709428V' and full_name = 'Kumari Ekanayake';</p> <a class="btn btn-primary" href="update.php?command=3">Click to execute</a>
-            <p>UPDATE employee SET job_type = 'Supervisor' and salary = 70000 WHERE employee_id = 'E0016';</p> <a class="btn btn-primary" href="update.php?command=4">Click to execute</a>
-            <p>UPDATE employee SET salary = salary * 0.1 WHERE start_date < '2010-01-01';</p> <a class="btn btn-primary" href="update.php?command=5">Click to execute</a>
-            <p>UPDATE property SET proposed_rental = 70000 WHERE property_no = 'P0004';</p> <a class="btn btn-primary" href="update.php?command=6">Click to execute</a>
-            <p>UPDATE property_requirement SET max_rent = 60000 WHERE requirement_no = 'R0003';</p> <a class="btn btn-primary" href="update.php?command=7">Click to execute</a>
+            <p>[1] UPDATE assistant SET supervisor_no = 'S0002' WHERE employee_no = 'E0016';</p> <a class="btn btn-primary" href="update.php?command=1">Click to execute</a>
+            <p>[2] UPDATE branch SET contact_no = '0117463081', address = 'No. 201/5, Galle Road, Colombo 03' WHERE branch_no = 'BR100'; </p> <a class="btn btn-primary" href="update.php?command=2">Click to execute</a>
+            <p>[3] UPDATE client SET nic = '198457094285' WHERE nic = '845709428V' and full_name = 'Kumari Ekanayake';</p> <a class="btn btn-primary" href="update.php?command=3">Click to execute</a>
+            <p>[4] UPDATE employee SET job_type = 'Supervisor' and salary = 70000 WHERE employee_id = 'E0016';</p> <a class="btn btn-primary" href="update.php?command=4">Click to execute</a>
+            <p>[5] UPDATE employee SET salary = salary * 0.1 WHERE start_date < '2010-01-01' ;</p> <a class="btn btn-primary" href="update.php?command=5">Click to execute</a>
+            <p>[6] UPDATE property SET proposed_rental = 70000 WHERE property_no = 'P0004';</p> <a class="btn btn-primary" href="update.php?command=6">Click to execute</a>
+            <p>[7] UPDATE property_requirement SET max_rent = 60000 WHERE requirement_no = 'R0003';</p> <a class="btn btn-primary" href="update.php?command=7">Click to execute</a>
         </div>
         <div id="select" class="d-flex flex-column sec p-4 mb-4  rounded shadow-sm" style="background-color:white;">
             <h4>Sample Select Statements</h4>
