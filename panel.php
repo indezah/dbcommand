@@ -18,7 +18,7 @@ if (isset($_POST["role"])) {
 
     <style>
         body {
-            font-family: roboto;
+            font-family: roboto, arial;
             background: rgb(131, 58, 180);
             background: linear-gradient(232deg, rgba(131, 58, 180, 1) 0%, rgba(7, 0, 89, 1) 91%);
             background-attachment: fixed;
