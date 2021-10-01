@@ -11,6 +11,9 @@ if (isset($_POST["role"])) {
 
 <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +21,7 @@ if (isset($_POST["role"])) {
 
     <style>
         body {
-            font-family: roboto, arial;
+            font-family: 'Roboto', sans-serif;
             background: rgb(131, 58, 180);
             background: linear-gradient(232deg, rgba(131, 58, 180, 1) 0%, rgba(7, 0, 89, 1) 91%);
             background-attachment: fixed;
@@ -84,8 +87,8 @@ if (isset($_POST["role"])) {
             <p>[3] UPDATE client SET nic = '198457094285' WHERE nic = '845709428V' and full_name = 'Kumari Ekanayake';</p> <a class="btn btn-primary" href="update.php?command=3">Click to execute</a>
             <p>[4] UPDATE employee SET job_type = 'Supervisor' and salary = 70000 WHERE employee_id = 'E0016';</p> <a class="btn btn-primary" href="update.php?command=4">Click to execute</a>
             <p>[5] UPDATE employee SET salary = salary * 0.1 WHERE start_date < '2010-01-01' ;</p> <a class="btn btn-primary" href="update.php?command=5">Click to execute</a>
-            <p>[6] UPDATE property SET proposed_rental = 70000 WHERE property_no = 'P0004';</p> <a class="btn btn-primary" href="update.php?command=6">Click to execute</a>
-            <p>[7] UPDATE property_requirement SET max_rent = 60000 WHERE requirement_no = 'R0003';</p> <a class="btn btn-primary" href="update.php?command=7">Click to execute</a>
+                    <p>[6] UPDATE property SET proposed_rental = 70000 WHERE property_no = 'P0004';</p> <a class="btn btn-primary" href="update.php?command=6">Click to execute</a>
+                    <p>[7] UPDATE property_requirement SET max_rent = 60000 WHERE requirement_no = 'R0003';</p> <a class="btn btn-primary" href="update.php?command=7">Click to execute</a>
         </div>
         <div id="select" class="d-flex flex-column sec p-4 mb-4  rounded shadow-sm" style="background-color:white;">
             <h4>Sample Select Statements</h4>
