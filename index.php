@@ -16,8 +16,8 @@ $_SESSION["role"] = "Guest";
     <style>
         body {
             font-family: roboto;
-            background: rgb(148, 187, 233);
-            background: radial-gradient(circle, rgba(148, 187, 233, 1) 0%, rgba(186, 83, 255, 1) 100%);
+            background: grey;
+            
             background-attachment: fixed;
         }
     </style>
